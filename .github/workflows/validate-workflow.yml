@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to validate a definition
     steps:
+      - uses: actions/checkout@v3
       - uses: swagger-api/swagger-parser@action
         with:
-          ref: action
-          inputSpec: '/home/runner/work/swagger-parser/swagger-parser/modules/swagger-parser-cli/src/test/resources/fileWithNoErrorMessages.yaml'
+          inputSpec: 'resources/fileWithNoErrorMessages.yaml'
           options: '-resolve -resolveFully'
           serializationType: '-json'
-          logsPath: '/home/runner/work/swagger-parser/swagger-parser/modules/swagger-parser-cli/target/test-classes/parserLogs.yaml'
-          parserSpecPath: '/home/runner/work/swagger-parser/swagger-parser/modules/swagger-parser-cli/target/test-classes/specParsed.json'
+          logsPath: 'resources/parserLogs.yaml'
+          parserSpecPath: 'resources/specParsed.json'
 
 
 
