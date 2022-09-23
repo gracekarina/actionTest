@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: swagger-api/swagger-parser@action
+      - uses: ./.github/actions/
         with:
           inputSpec: 'resources/fileWithNoErrorMessages.yaml'
           options: '-resolve -resolveFully'
