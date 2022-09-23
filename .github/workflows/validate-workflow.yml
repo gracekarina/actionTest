@@ -13,8 +13,10 @@ jobs:
           inputSpec: 'resources/fileWithNoErrorMessages.yaml'
           options: '-resolve -resolveFully'
           serializationType: '-json'
-          logsPath: 'resources/parserLogs.yaml'
-          parserSpecPath: 'resources/specParsed.json'
+          logsPath: '/resources/parserLogs.yaml'
+          parserSpecPath: '/resources/specParsed.json'
+      - run: pwd
+        shell: bash
 
 
 
