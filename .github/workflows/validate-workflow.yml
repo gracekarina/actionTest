@@ -8,6 +8,8 @@ jobs:
     name: A job to validate a definition
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: action
       - uses: swagger-api/swagger-parser@action
         with:
           inputSpec: '/home/runner/work/swagger-parser/swagger-parser/modules/swagger-parser-cli/src/test/resources/fileWithNoErrorMessages.yaml'
