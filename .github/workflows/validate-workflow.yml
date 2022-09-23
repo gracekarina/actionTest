@@ -8,7 +8,7 @@ jobs:
     name: A job to validate a definition
     steps:
       - uses: actions/checkout@v3
-      - uses: swagger-api/swagger-parser@action/.github/actions/
+      - uses: swagger-api/swagger-parser/.github/actions/@action
         with:
           inputSpec: 'resources/fileWithNoErrorMessages.yaml'
           options: '-resolve -resolveFully'
