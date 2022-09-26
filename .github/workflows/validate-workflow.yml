@@ -11,11 +11,11 @@ jobs:
       - uses: swagger-api/swagger-parser/.github/actions@action
         with:
           inputSpec: '/home/runner/work/actionTest/actionTest/resources/fileWithNoErrorMessages.yaml'
-          options: '-resolve -resolveFully'
+          options: '-resolve'
           serializationType: '-json'
           logsPath: '/home/runner/work/actionTest/actionTest/resources/parserLogs.yaml'
           parserSpecPath: '/home/runner/work/actionTest/actionTest/resources/specParsed.json'
-      - run: tree
+      - run: cat home/runner/work/actionTest/actionTest/resources/specParsed.json
         shell: bash
 
 
