@@ -8,7 +8,7 @@ jobs:
     name: A job to validate a definition
     steps:
       - uses: actions/checkout@v3
-      - uses: swagger-api/swagger-parser/.github/actions
+      - uses: swagger-api/swagger-parser/.github/actions@master
         with:
           inputSpec: 'actionTest/actionTest/resources/internal-references-in-external-files/main.yaml'
           options: '-resolve -resolveFully'
