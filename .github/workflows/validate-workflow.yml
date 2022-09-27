@@ -8,14 +8,14 @@ jobs:
     name: A job to validate a definition
     steps:
       - uses: actions/checkout@v3
-      - uses: swagger-api/swagger-parser/.github/actions
+      - uses: swagger-api/swagger-parser/.github/actions@action
         with:
-          inputSpec: '/home/runner/work/actionTest/actionTest/resources/internal-references-in-external-files/main.yaml'
+          inputSpec: 'actionTest/actionTest/resources/internal-references-in-external-files/main.yaml'
           options: '-resolve -resolveFully'
           parserVersion: 'LATEST'
           serializationType: '-json'
-          logsPath: '/home/runner/work/actionTest/actionTest/resources/parserLogs.yaml'
-          parserSpecPath: '/home/runner/work/actionTest/actionTest/resources/specParsed.json'
+          logsPath: 'actionTest/actionTest/resources/parserLogs.yaml'
+          parserSpecPath: 'actionTest/actionTest/resources/specParsed.json'
       - run: cat /home/runner/work/actionTest/actionTest/resources/specParsed.json
         shell: bash
 
