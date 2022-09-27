@@ -8,10 +8,11 @@ jobs:
     name: A job to validate a definition
     steps:
       - uses: actions/checkout@v3
-      - uses: swagger-api/swagger-parser/.github/actions@action
+      - uses: swagger-api/swagger-parser/.github/actions
         with:
-          inputSpec: '/home/runner/work/actionTest/actionTest/resources/fileWithNoErrorMessages.yaml'
-          options: '-resolve'
+          inputSpec: '/home/runner/work/actionTest/actionTest/resources/internal-references-in-external-files/main.yaml'
+          options: '-resolve -resolveFully'
+          parserVersion: 'LATEST'
           serializationType: '-json'
           logsPath: '/home/runner/work/actionTest/actionTest/resources/parserLogs.yaml'
           parserSpecPath: '/home/runner/work/actionTest/actionTest/resources/specParsed.json'
