@@ -11,7 +11,7 @@ jobs:
       - uses: swagger-api/swagger-parser/.github/actions@master
         with:
           inputSpec: 'actionTest/actionTest/resources/fileWithValidationErrorMessages.yaml'
-          options: '-resolve -resolveFully'
+          options: '-resolve'
           parserVersion: 'LATEST'
           serializationType: '-json'
           logsPath: 'actionTest/actionTest/resources/parserLogs.yaml'
