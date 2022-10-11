@@ -14,7 +14,7 @@ jobs:
           options: '-resolve -resolveFully'
           parserVersion: 'LATEST'
           serializationType: '-json'
-          logsPath: 'actionTest/actionTest/resources/parserLogs.yaml'
+          logsPath: 'actionTest/actionTest/resources/parserLogs2.yaml'
           parserSpecPath: 'actionTest/actionTest/resources/specParsed.json'
       - run: cat /home/runner/work/actionTest/actionTest/resources/specParsed.json
         shell: bash
