@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: swagger-api/swagger-parser/.github/actions@master
         with:
-          inputSpec: 'actionTest/actionTest/resources/fileWithValidationErrorMessages.yaml'
-          options: '-resolve'
+          inputSpec: 'actionTest/actionTest/resources/internal-references-in-external-files/main.yaml'
+          options: '-resolve -resolveFully'
           parserVersion: 'LATEST'
           serializationType: '-json'
           logsPath: 'actionTest/actionTest/resources/parserLogs.yaml'
